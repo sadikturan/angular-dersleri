@@ -1,0 +1,54 @@
+<navbar></navbar>
+
+<div class="container pt-100 mb-5">
+
+  <div *ngIf="orderSent" class="m-2 text-center">
+    <h2>Teşekkür ederiz</h2>
+    <p>Siparişiniz kayıt edildi.</p>
+    <button class="btn btn-primary" routerLink="/shop">Alışverişe Devam Et</button>
+  </div>
+
+  <form *ngIf="!orderSent" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" #name="ngModel" name="name" [(ngModel)]="order.name" required>
+      <span *ngIf="submitted && name.invalid" class="text-danger">
+        Lütfen adınızı giriniz.
+      </span>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input class="form-control" #address="ngModel" name="address" [(ngModel)]="order.address" required>
+      <span *ngIf="submitted && address.invalid" class="text-danger">
+          Lütfen adres giriniz.
+        </span>
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input class="form-control" #city="ngModel" name="city" [(ngModel)]="order.city" required>
+      <span *ngIf="submitted && city.invalid" class="text-danger">
+          Lütfen şehir giriniz.
+        </span>
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input class="form-control" #phone="ngModel" name="phone" [(ngModel)]="order.phone" required>
+      <span *ngIf="submitted && phone.invalid" class="text-danger">
+          Lütfen telefon giriniz.
+        </span>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input class="form-control" #email="ngModel" name="email" [(ngModel)]="order.email" required>
+      <span *ngIf="submitted && email.invalid" class="text-danger">
+          Lütfen email giriniz.
+        </span>
+    </div>
+
+    <div class="text-center">
+      <button type="submit"  class="btn btn-primary">Siparişi Tamamla</button>
+      <button type="submit" routerLink="/shop" class="btn btn-primary ml-2">Alışverişe Devam Et</button>
+    </div>
+  </form>
+
+</div>

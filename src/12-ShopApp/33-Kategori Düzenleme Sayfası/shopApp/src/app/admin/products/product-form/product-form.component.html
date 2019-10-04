@@ -1,0 +1,26 @@
+<h5>
+  {{ editing ? "Edit": "Create" }} Product
+</h5>
+
+<form #form="ngForm" (ngSubmit)="save(form)">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" name="name" [(ngModel)]="product.name">
+  </div>
+  <div class="form-group">
+    <label>Price</label>
+    <input class="form-control" name="price" [(ngModel)]="product.price">
+  </div>
+  <div class="form-group">
+    <label>Image</label>
+    <input class="form-control" name="imageUrl" [(ngModel)]="product.imageUrl">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" name="description" [(ngModel)]="product.description"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    {{ editing ? "Edit": "Create" }} Product
+  </button>
+  <button class="btn btn-warning" routerLink="/admin/main/products">Cancel</button>
+</form>

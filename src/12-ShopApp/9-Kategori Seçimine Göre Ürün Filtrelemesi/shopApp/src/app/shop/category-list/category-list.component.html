@@ -1,0 +1,9 @@
+<div class="list-group">
+  <a *ngFor="let c of data" 
+      href="#" 
+      (click)="changeCategory(c)"
+      class="list-group-item list-group-item-action" 
+      [class.active]="selectedCategory==c">
+        {{ c.name }}
+  </a>
+</div>

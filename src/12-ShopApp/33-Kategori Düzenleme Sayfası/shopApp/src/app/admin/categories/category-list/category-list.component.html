@@ -1,0 +1,18 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of getCategories()">     
+      <td>{{p.name}}</td>
+      <td>
+        <button class="btn btn-warning btn-sm" [routerLink]="['/admin/main/categories/edit',p.id]">Edit</button>
+        <button class="btn btn-danger btn-sm ml-1" (click)="deleteCategory(p)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" routerLink="/admin/main/categories/create">Kategori Ekle</button>

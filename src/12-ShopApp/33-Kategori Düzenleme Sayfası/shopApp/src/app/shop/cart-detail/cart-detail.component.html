@@ -1,0 +1,83 @@
+<navbar></navbar>
+
+<div class="container pt-100 mb-5">
+
+  <h1 class="mb-2">Alışveriş Sepetiniz</h1>
+  <div class="row">
+    <div class="col-8">
+
+      <ng-container *ngIf="cart.itemCount>0">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Ürün</th>
+              <th>Fiyat</th>
+              <th>Miktar</th>
+              <th>Toplam</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cart.items">
+              <td>
+                <img src="assets/img/{{item.product.imageUrl}}" width="80">
+              </td>
+              <td>{{ item.product.name }}</td>
+              <td>{{ item.product.price }} TL</td>
+              <td>
+                <input type="text" 
+                class="form-control" 
+                style="width: 50px;"
+                [value]="item.quantity"
+                (change)="cart.updateQuantity(item.product,$event.target.value)">
+              </td>
+              <td>{{ item.quantity * item.product.price }} TL</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="cart.removeItem(item.product.id)">
+                  <i class="fa fa-times fa-fw"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+
+
+      <ng-container *ngIf="cart.itemCount==0">
+        <div class="alert alert-warning mt-3">
+          Sepetinizde ürün yok <br>
+          <button routerLink="/shop" class="btn btn-link p-0">
+            Alışverişe devam etmek için tıklayınız.
+          </button>
+        </div>
+      </ng-container>
+
+    </div>
+    <div class="col-4">
+      <ng-container *ngIf="cart.itemCount>0">
+        <div class="text-left">
+          <h4>Alışveriş Özeti</h4>
+        </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Toplam</th>
+              <td>{{cart.total}} TL</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div>
+          <button routerLink="/shop" class="btn btn-primary btn-sm">
+            Alışverişe Devam Et
+          </button>
+          <button routerLink="/checkout" class="btn btn-primary btn-sm ml-2">
+              Alışverişi Tamamla
+            </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+</div>
