@@ -1,3 +1,7 @@
+# Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin
+
+**Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/angular-dersleri/?couponCode=GITHUB27" tıklayınız.")**
+
 ** **En kapsamlı** ve **en güncel** **Angular kursu**na hoş geldiniz. Angular' in son versiyonu **Angular 8' i bizimle öğrenin.**
 
 **Angular**, **Single Page Application (SPA)** diye adlandırılan **tek sayfalık** javascript uygulamaları geliştirebildiğimiz ve **Google** tarafından geliştirilen popüler bir **font-end framework**'üdür.
