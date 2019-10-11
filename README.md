@@ -1,6 +1,6 @@
 # Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin
 
-**Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/angular-dersleri/?couponCode=GITHUB27 "tıklayınız.")**
+**Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/angular-dersleri/?referralCode=296CF5D100064B0E29FC "tıklayınız.")**
 
 ** **En kapsamlı** ve **en güncel** **Angular kursu**na hoş geldiniz. Angular' in son versiyonu **Angular 8' i bizimle öğrenin.**
 
