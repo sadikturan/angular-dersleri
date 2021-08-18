@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5 mx-auto">
+      <h3 class="bg-primary text-white p-3">
+        {{ getName() }}' todo list
+      </h3>
+
+      <div class="input-group mb-3">
+        <input
+        #txtItem type="text" class="form-control"
+        (keyup.enter)="addItem(txtItem.value); txtItem.value=''"
+        >
+        <button class="btn btn-outline-primary" (click)="addItem(txtItem.value); txtItem.value=''">Add</button>
+      </div>
+
+      <div class="form-check mb-3">
+        <input type="checkbox" [(ngModel)]="displayAll" class="form-check-input" name="" id="displayAll">
+        <label for="displayAll" class="form-check-label">Hepsini Göster</label>
+      </div>
+
+      <table class="table table-bordered" *ngIf="getItems().length > 0">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of getItems(); let i = index;">
+            <td>{{ i+1 }}</td>
+            <td>{{ item.description }}</td>
+            <td>
+              <!-- <div *ngIf="item.action">Yes</div>
+              <div *ngIf="!item.action">No</div> -->
+
+              <div [ngSwitch]="item.action">
+                <div *ngSwitchCase="true">Yes</div>
+                <div *ngSwitchDefault>No</div>
+              </div>
+
+            </td>
+            <td>
+              <input type="checkbox" [(ngModel)]="item.action" name="" id="">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-warning"  *ngIf="getItems().length == 0">
+        Listede eleman yok.
+      </div>
+
+    </div>
+  </div>
+</div>

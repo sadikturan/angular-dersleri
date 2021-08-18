@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {"id": 1, "title": "film 1", "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste", "imageUrl": "1.jpeg"},
+    {"id": 2, "title": "film 2", "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste", "imageUrl": "2.jpeg"},
+    {"id": 3, "title": "film 3", "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste", "imageUrl": "3.jpeg"},
+    {"id": 4, "title": "film 4", "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste", "imageUrl": "4.jpeg"},
+    {"id": 5, "title": "film 5", "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste", "imageUrl": "5.jpeg"}
+  ],
+  "categories": [
+    {"id": 1, "title":"macera"},
+    {"id": 2, "title":"romantik"},
+    {"id": 3, "title":"komedi"},
+    {"id": 4, "title":"dram"},
+    {"id": 5, "title":"savaş"}
+  ]
+}

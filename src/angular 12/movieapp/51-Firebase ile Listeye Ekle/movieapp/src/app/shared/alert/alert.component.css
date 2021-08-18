@@ -1,0 +1,25 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+}
+
+.message-box {
+    position: fixed;
+    top: 20vh;
+    left: 30vw;
+    width: 40vw;
+    padding: 20px;
+    background: white;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.alert-buttons {
+    text-align: right;
+}

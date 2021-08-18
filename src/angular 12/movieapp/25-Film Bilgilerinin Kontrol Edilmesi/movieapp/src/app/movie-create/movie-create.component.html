@@ -1,0 +1,31 @@
+<h1>Create Movie</h1>
+
+<form>
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input #title type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea #description class="form-control"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="imageUrl" class="form-label">imageUrl</label>
+    <input #imageUrl type="text" class="form-control">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="categoryId" class="form-label">category</label>
+    <select #categoryId class="form-select">
+      <option value="-1">Seçiniz</option>
+      <option *ngFor="let item of categories" [value]="item.id">{{ item.name }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="createMovie(title, description, imageUrl, categoryId)">Create</button>
+
+</form>

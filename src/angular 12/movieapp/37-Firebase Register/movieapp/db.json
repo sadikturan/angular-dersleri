@@ -1,0 +1,113 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "film 1",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "1.jpeg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "film 2",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "2.jpeg",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "film 3",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "3.jpeg",
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "title": "film 4",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "4.jpeg",
+      "categoryId": 3
+    },
+    {
+      "id": 5,
+      "title": "film 5",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "5.jpeg",
+      "categoryId": 4
+    },
+    {
+      "id": 6,
+      "title": "film 6",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, deleniti eum odio illo pariatur doloremque esse veniam libero inventore non natus id voluptatum consectetur magni quos? Totam corrupti placeat iste",
+      "imageUrl": "1.jpeg",
+      "categoryId": 4
+    },
+    {
+      "id": 7,
+      "title": "ddddddddddddddd",
+      "description": "dddd",
+      "imageUrl": "ddddddd",
+      "isPopular": false,
+      "datePublished": 1627720262441,
+      "categoryId": "1"
+    },
+    {
+      "id": 8,
+      "title": "ffffff",
+      "description": "ffff",
+      "imageUrl": "fff",
+      "isPopular": false,
+      "datePublished": 1627720320743,
+      "categoryId": "1"
+    },
+    {
+      "id": 9,
+      "title": "film adı",
+      "description": "film açıklamaaa",
+      "imageUrl": "1.jpeg",
+      "isPopular": false,
+      "datePublished": 1627720599176,
+      "categoryId": "1"
+    },
+    {
+      "id": 10,
+      "title": "film adı",
+      "description": "film açıklama",
+      "imageUrl": "1.jpeg",
+      "isPopular": false,
+      "datePublished": 1627997024577,
+      "categoryId": "1"
+    },
+    {
+      "id": 11,
+      "title": "film adı",
+      "description": "açıklama",
+      "imageUrl": "1.jpeg",
+      "isPopular": false,
+      "datePublished": 1627998228611,
+      "categoryId": "1"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "macera"
+    },
+    {
+      "id": 2,
+      "name": "romantik"
+    },
+    {
+      "id": 3,
+      "name": "komedi"
+    },
+    {
+      "id": 4,
+      "name": "dram"
+    },
+    {
+      "id": 5,
+      "name": "savaş"
+    }
+  ]
+}

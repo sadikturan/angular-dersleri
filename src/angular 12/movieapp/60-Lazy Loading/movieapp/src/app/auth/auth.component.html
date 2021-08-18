@@ -1,0 +1,27 @@
+
+<div class="row">
+    <div class="col-5 mx-auto">
+        
+        <app-alert *ngIf="error" [message]="error" (close)="closeDialog($event)"></app-alert>
+        
+        <form *ngIf="!loading" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" required email ngModel name="email" id="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" required minlength="6" ngModel name="password" id="password" class="form-control">
+            </div>
+        
+            <button type="submit" class="btn btn-primary" [disabled]="authForm.invalid">{{ isLoginMode ? 'Login':'Register' }}</button>
+            <button type="button" class="btn btn-danger ms-2" (click)="onToggleMode()">
+                Toggle to {{ isLoginMode ? 'Register': 'Login' }}
+            </button>
+        </form>
+        
+       <app-loading *ngIf="loading"></app-loading>
+          
+    </div>
+</div>
+

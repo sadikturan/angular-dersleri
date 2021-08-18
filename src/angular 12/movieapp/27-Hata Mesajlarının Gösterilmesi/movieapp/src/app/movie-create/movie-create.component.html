@@ -1,0 +1,43 @@
+<h1>Create Movie</h1>
+
+<form #form="ngForm" (ngSubmit)="createMovie()">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input required minlength="5" #title="ngModel" (change)="log(title)" type="text" [(ngModel)]="model.title" name="title" class="form-control">
+    <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
+      <p *ngIf="title.errors.required">gerekli alan</p>
+      <p *ngIf="title.errors.minlength">min 5 karakter girmelisiniz.</p>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea required class="form-control" [(ngModel)]="model.description" name="description" #description="ngModel"></textarea>
+    <div class="alert alert-danger" *ngIf="description.invalid && description.touched">
+      gerekli alan
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="imageUrl" class="form-label">imageUrl</label>
+    <input required type="text" [(ngModel)]="model.imageUrl" class="form-control" name="imageUrl" #imageUrl="ngModel">
+    <div class="alert alert-danger" *ngIf="imageUrl.invalid && imageUrl.touched">
+      gerekli alan
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="categoryId" class="form-label">category</label>
+    <select required [(ngModel)]="model.categoryId" class="form-select" name="categoryId" #categoryId="ngModel">
+      <option value="">Seçiniz</option>
+      <option *ngFor="let item of categories" [value]="item.id">{{ item.name }}</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="categoryId.invalid && categoryId.touched">
+      gerekli alan
+    </div>
+  </div>
+
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Create</button>
+
+</form>

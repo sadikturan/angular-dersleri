@@ -1,0 +1,31 @@
+
+<div *ngIf="!loading">
+  <div *ngIf="movie else no_movie">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/img/{{ movie.imageUrl }}" class="img-fluid rounded-start" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h1 class="card-title">{{ movie.title }}</h1>
+            <p class="card-text">{{ movie.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #no_movie>
+  <div class="alert alert-warning" >
+    Film bulunamadı.
+  </div>
+</ng-template>
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+

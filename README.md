@@ -1,8 +1,8 @@
-# Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin
+# Angular 12 ile Sıfırdan İleri Seviye Web Geliştirme
 
-**Angular 8 Kursu: Baştan Sona Uygulamalı Projelerle Öğrenin Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/angular-dersleri/?referralCode=296CF5D100064B0E29FC "tıklayınız.")**
+**Angular 12 ile Sıfırdan İleri Seviye Web Geliştirme Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/angular-dersleri/?referralCode=296CF5D100064B0E29FC "tıklayınız.")**
 
-** **En kapsamlı** ve **en güncel** **Angular kursu**na hoş geldiniz. Angular' in son versiyonu **Angular 8' i bizimle öğrenin.**
+** **En kapsamlı** ve **en güncel** **Angular kursu**na hoş geldiniz. Angular' in son versiyonu **Angular 12' i bizimle öğrenin.**
 
 **Angular**, **Single Page Application (SPA)** diye adlandırılan **tek sayfalık** javascript uygulamaları geliştirebildiğimiz ve **Google** tarafından geliştirilen popüler bir **font-end framework**'üdür.
 
@@ -20,24 +20,34 @@ Kurs planımız;
     
 -   TypeScript
     
--   Hazırlık Projesi - TodoApp
+-   TodoApp
     
--   Angular Temel Özellikleri - MovieApp
-    
+-   MovieApp
+
 -   Data Binding Yöntemleri
+
+-   Pipes
+
+-   Events
+
+-   Services
+
+-   Http
+
+-   Routing    
     
 -   Directives
-    
--   Uygulama: Table Component
-    
+      
 -   Template-driven Forms
     
 -   Reactive Forms
-    
--   Http Servisleri ile Çalışma
-    
--   Routing
+
+-   Firebase Rest Api
+
+-   Firebase Authentication
+
+-   Modules
+
+-   Angular Publish
     
 -   ShopApp - Eticaret Uygulaması
-    
--   Bootstrap 4

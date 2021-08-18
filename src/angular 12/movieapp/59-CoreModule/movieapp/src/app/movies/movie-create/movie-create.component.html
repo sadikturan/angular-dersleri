@@ -1,0 +1,40 @@
+<h1>Create Movie</h1>
+
+<form [formGroup]="movieForm" (ngSubmit)="createMovie()">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" formControlName="title">
+    value: {{ movieForm.value.title }}
+    <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
+      <p *ngIf="title.errors.required">gerekli alan</p>
+      <p *ngIf="title.errors.minlength">min 5 karakter girmelisiniz.</p>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" name="description" formControlName="description"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="imageUrl" class="form-label">imageUrl</label>
+    <input type="text" class="form-control" name="imageUrl" formControlName="imageUrl">
+    <div class="alert alert-danger" *ngIf="imageUrl.invalid &&imageUrl.touched">
+      <p *ngIf="imageUrl.errors.required">gerekli alan</p>
+      <p *ngIf="imageUrl.errors.wrongExtension">hatalı resim uzantısı.</p>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="categoryId" class="form-label">category</label>
+    <select class="form-select" name="categoryId" formControlName="categoryId">
+      <option value="">Seçiniz</option>
+      <option *ngFor="let item of categories" [value]="item.id">{{ item.name }}</option>
+    </select>
+  </div>
+
+  <button [disabled]="movieForm.invalid" type="submit" class="btn btn-primary">Create</button>
+  <button class="btn btn-warning" (click)="clearForm()">Clear</button>
+
+</form>

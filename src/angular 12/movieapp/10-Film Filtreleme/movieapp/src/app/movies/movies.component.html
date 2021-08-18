@@ -1,0 +1,41 @@
+
+<div *ngIf="movies.length>0; else no_movies">
+  <h1>{{ title }}</h1>
+
+  <div class="alert alert-warning" *ngIf="movies.length>0">
+    {{ movies.length }} film bulundu.
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Search...">
+    <small class="text-muted" *ngIf="filterText">Aradığınız kelime: {{ filterText }}</small>
+  </div>
+
+  <ng-template [ngTemplateOutlet]="movieList1"></ng-template>
+
+</div>
+
+<ng-template #no_movies>
+  <div class="alert alert-warning" >
+    Film bulunamadı.
+  </div>
+</ng-template>
+
+
+<ng-template #movieList1>
+  <div class="card mb-3" *ngFor="let item of movies | movieFilter: filterText">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="/assets/img/{{ item.imageUrl }}" class="img-fluid rounded-start" alt="">
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h2 class="card-title">{{ item.title | titlecase }}</h2>
+          <p class="card-text">{{ item.description | summary: 30 }}</p>
+          <p class="card-text">{{ item.datePublished | date: 'dd/MM/y' }}</p>
+          <button class="btn btn-sm btn-outline-primary">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

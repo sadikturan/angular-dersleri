@@ -1,0 +1,22 @@
+
+<div class="card mb-3" *ngFor="let item of movies">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="/assets/img/{{ item.imageUrl }}" class="img-fluid rounded-start" alt="">
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h2 class="card-title">{{ item.title }}</h2>
+        <p class="card-text">{{ item.description }}</p>
+        <button class="btn btn-sm btn-outline-primary">Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-movie *ngFor="let item of movies"></app-movie> -->
+
+<!-- <ul>
+  <li *ngFor="let item of movies"> {{ item }}</li>
+</ul> -->
+
